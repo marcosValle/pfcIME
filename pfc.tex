@@ -1,0 +1,1469 @@
+%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,brazil]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=3cm,lmargin=2.5cm,rmargin=2.5cm,headheight=1cm,headsep=1cm}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{textcomp}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\lyxmathsym}[1]{\ifmmode\begingroup\def\b@ld{bold}
+  \text{\ifx\math@version\b@ld\bfseries\fi#1}\endgroup\else#1\fi}
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{amsmath}
+\usepackage{tocbibind}
+\usepackage{tocloft}
+
+\renewcommand \thefigure{FIG.~\ifnum \c@section>\z@ \thesubsection.\fi \@arabic\c@figure}
+\def\fps@figure{tbp}
+\def\ftype@figure{1}
+\def\ext@figure{lof}
+\def\fnum@figure{\thefigure}
+
+\renewcommand \thetable{TAB.~\ifnum \c@section>\z@ \thesubsection.\fi \@arabic\c@table}
+\def\fps@table{tbp}
+\def\ftype@table{1}
+\def\ext@table{lot}
+\def\fnum@table{\thetable}
+
+\renewcommand\@pnumwidth{1.55em}%era 1.55
+\renewcommand\@tocrmarg{5em}%era 2.55--5
+\renewcommand\@dotsep{2} %era 3--2
+\setcounter{tocdepth}{3} %{3}
+
+\renewcommand*\l@figure{\vskip 10pt\normalfont\@dottedtocline{1}{0em}{6em}} 
+\renewcommand*\l@table{\vskip 10pt\normalfont\@dottedtocline{1}{0em}{6em}} 
+
+\renewcommand*\l@section{\vskip 10pt\bfseries\@dottedtocline{1}{0em}{3.5em}} 
+\renewcommand*\l@subsection{\normalfont \@dottedtocline{2}{0em}{4.0em}}
+\renewcommand*\l@subsubsection{\normalfont \@dottedtocline{3}{0em}{4.0em}} 
+
+
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5cm \@plus .2ex}%
+                                     {\normalfont\bfseries\MakeUppercase}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5cm \@plus .2ex}%
+                                     {\normalfont\MakeUppercase}}
+
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5cm \@plus .2ex}%
+                                     {\normalfont\normalsize\MakeUppercase}}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\begin{flushleft}
+{\small{\thispagestyle{empty}}}
+\par\end{flushleft}{\small \par}
+
+\begin{center}
+\textbf{\small{MINISTÉRIO DA DEFESA }}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{EXÉRCITO BRASILEIRO }}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{DEPARTAMENTO DE CIÊNCIA E TECNOLOGIA }}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{INSTITUTO MILITAR DE ENGENHARIA }}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{CURSO DE GRADUAÇÃO EM ENGENHARIA DE COMPUTAÇÃO}}
+\par\end{center}{\small \par}
+
+\textbf{\small{\vspace{3cm}
+}}{\small \par}
+
+\noindent \begin{center}
+\textbf{\small{CARLOS ALBERTO VILLOTE DE OLIVEIRA}}
+\par\end{center}{\small \par}
+
+\noindent \begin{center}
+\textbf{\small{PAULO EDUARDO ALTHOFF}}
+\par\end{center}{\small \par}
+
+\noindent \begin{center}
+\textbf{\small{RENAN GEMIGNANI}}
+\par\end{center}{\small \par}
+
+\textbf{\small{\vspace{3cm}
+}}{\small \par}
+
+\begin{center}
+\textbf{\small{EMPREGO DE REDES NEURAIS PARA O }}\textbf{\textit{\small{POKER
+TEXAS HOLD'EM}}}
+\par\end{center}{\small \par}
+
+\textbf{\small{\vspace{4cm}
+}}{\small \par}
+
+\noindent \begin{center}
+\textbf{\small{RIO DE JANEIRO }}
+\par\end{center}{\small \par}
+
+\noindent \begin{center}
+\textbf{\small{2013}}
+\par\end{center}{\small \par}
+
+{\small{\newpage{}}}{\small \par}
+
+{\small{\thispagestyle{empty}}}{\small \par}
+
+\begin{center}
+\textbf{\small{INSTITUTO MILITAR DE ENGENHARIA }}
+\par\end{center}{\small \par}
+
+\textbf{\small{\vspace{2cm}
+}}{\small \par}
+
+\begin{center}
+\textbf{\small{CARLOS ALBERTO VILLOTE DE OLIVEIRA}}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{PAULO EDUARDO ALTHOFF}}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{RENAN GEMIGNANI}}
+\par\end{center}{\small \par}
+
+{\small{\vspace{3cm}
+}}{\small \par}
+
+\begin{center}
+\textbf{\small{EMPREGO DE REDES NEURAIS PARA O }}\textbf{\textit{\small{POKER
+TEXAS HOLD'EM}}}
+\par\end{center}{\small \par}
+
+\noindent \begin{flushright}
+{\small{\vspace{2cm}
+}}
+\par\end{flushright}{\small \par}
+
+\noindent \begin{flushright}
+{\small{}}%
+\begin{minipage}[t]{1\columnwidth}%
+\noindent \begin{flushright}
+{\small{\hspace{6cm}}}%
+\begin{minipage}[t]{0.45\columnwidth}%
+\noindent {\small{Projeto de Final de Curso apresentado ao Curso de
+Engenharia de Computação do Instituto Militar (IME) de Engenharia,
+como parte das exigências do IME.}}{\small \par}
+
+{\small{$ $}}{\small \par}
+
+{\small{Orientador: Prof. Marcos Veloso Peixoto \textendash{} D.C.}}%
+\end{minipage}
+\par\end{flushright}%
+\end{minipage}
+\par\end{flushright}{\small \par}
+
+\noindent \begin{flushright}
+{\small{\vspace{1cm}
+}}
+\par\end{flushright}{\small \par}
+
+\begin{center}
+{\small{RIO DE JANEIRO }}
+\par\end{center}{\small \par}
+
+\begin{center}
+{\small{2013}}
+\par\end{center}{\small \par}
+
+{\small{\newpage{}}}{\small \par}
+
+{\small{\thispagestyle{empty}}}{\small \par}
+
+{\small{\noindent}}{\small \par}
+
+\noindent {\small{c2013}}{\small \par}
+
+{\small{\vspace{0.5cm}
+}}{\small \par}
+
+\noindent {\small{INSTITUTO MILITAR DE ENGENHARIA}}{\small \par}
+
+\noindent {\small{Praça General Tibúrcio, 80 \textendash{} Praia Vermelha }}{\small \par}
+
+\noindent {\small{Rio de Janeiro - RJ \hspace{1cm}CEP: 22290- 270}}{\small \par}
+
+{\small{\vspace{0.5cm}
+}}{\small \par}
+
+\noindent {\small{Este exemplar é de propriedade do Instituto Militar
+de Engenharia, que poderá incluí-lo em base de dados, armazenar em
+computa dor, microfilmar ou adotar qualquer forma de arquivamento.}}{\small \par}
+
+{\small{\vspace{0.5cm}
+}}{\small \par}
+
+{\small{É permitida a menção, reprodução parcial ou integral e a transmissão
+entre bibliotecas deste trabalho, sem modificação de seu texto, em
+qualquer meio que esteja ou venha a ser fixado, para pesquisa acadêmica,
+comentários e citações, desde que sem finalidade comercial e que seja
+feita a referência bibliográfica completa.}}{\small \par}
+
+{\small{\vspace{0.5cm}
+}}{\small \par}
+
+{\small{Os conceitos expressos neste trabalho são de responsabilidade
+do(s) autor(es) e do(s) orientador(es).}}{\small \par}
+
+{\small{\vspace{1.5cm}
+}}{\small \par}
+
+\noindent {\small{}}%
+\framebox{\begin{minipage}[t]{1\columnwidth}%
+{\small{\_\_\_\_\hspace{0.5cm}Althoff, Paulo Eduardo/ Gemignani,
+Renan/ Oliveira, Carlos Alberto Villote de}}{\small \par}
+
+{\small{\hspace{1cm}}}%
+\begin{minipage}[t]{1\columnwidth}%
+{\small{Emprego de Redes Neurais para o }}\textit{\small{Poker Texas
+Hold'em}}{\small{, no Rio de Janeiro / }}{\small \par}
+
+{\small{Carlos Alberto Villote de Oliveira, Paulo Eduardo Althoff,
+Renan Genignani}}{\small \par}
+
+{\small{- Rio de Janeiro : Instituto Militar de Engenharia, 2013.}}{\small \par}
+
+{\small{\vspace{0.5cm}
+}}{\small \par}
+
+{\small{\hspace{1cm}}}%
+\begin{minipage}[t]{1\columnwidth}%
+{\small{n f. : il., graf., tab. : - cm.}}{\small \par}
+
+{\small{\vspace{0.5cm}
+}}{\small \par}
+
+{\small{Dissertação (graduação) - Instituto Militar de Engenharia,
+2013.}}{\small \par}
+
+{\small{\vspace{0.5cm}
+}}{\small \par}
+
+{\small{1. Formação. }}%
+\end{minipage}%
+\end{minipage}%
+\end{minipage}}{\small \par}
+
+{\small{\newpage{}}}{\small \par}
+
+\begin{center}
+\textbf{\small{INSTITUTO MILITAR DE ENGENHARIA }}
+\par\end{center}{\small \par}
+
+\textbf{\small{\vspace{1cm}
+}}{\small \par}
+
+\begin{center}
+\textbf{\small{CARLOS ALBERTO VILLOTE DE OLIVEIRA}}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{PAULO EDUARDO ALTHOFF}}
+\par\end{center}{\small \par}
+
+\begin{center}
+\textbf{\small{RENAN GEMIGNANI}}
+\par\end{center}{\small \par}
+
+{\small{\vspace{1.5cm}
+}}{\small \par}
+
+\begin{center}
+\textbf{\small{EMPREGO DE REDES NEURAIS PARA O }}\textbf{\textit{\small{POKER
+TEXAS HOLD'EM}}}
+\par\end{center}{\small \par}
+
+{\small{\vspace{1.5cm}
+}}{\small \par}
+
+\noindent {\small{Projeto de Final de Curso apresentado ao Curso de
+Engenharia de Computação do Instituto Militar (IME) de Engenharia,
+como parte das exigências do IME.}}{\small \par}
+
+{\small{$ $}}{\small \par}
+
+{\small{Aprovado em \_\_/\_\_/\_\_\_\_ pela seguinte Banca Examinadora:}}{\small \par}
+
+{\small{$ $}}{\small \par}
+
+{\small{
+\[
+\underline{\hspace{15cm}}
+\]
+}}{\small \par}
+
+\begin{center}
+{\small{Orientador: Marcos Veloso Peixoto \textendash{} D.I.}}
+\par\end{center}{\small \par}
+
+{\small{\vspace{0cm}
+}}{\small \par}
+
+{\small{
+\[
+\underline{\hspace{15cm}}
+\]
+}}{\small \par}
+
+\begin{center}
+{\small{Alex Garcia, D.Sc.}}
+\par\end{center}{\small \par}
+
+{\small{\vspace{0cm}
+}}{\small \par}
+
+{\small{
+\[
+\underline{\hspace{15cm}}
+\]
+}}{\small \par}
+
+\begin{center}
+{\small{Ricardo Choren Noya, D.Sc.}}
+\par\end{center}{\small \par}
+
+{\small{\vfill{}
+}}{\small \par}
+
+\begin{center}
+{\small{RIO DE JANEIRO }}
+\par\end{center}{\small \par}
+
+\begin{center}
+{\small{2013}}
+\par\end{center}{\small \par}
+
+\newpage{}
+
+\noindent \hspace{6.5cm}%
+\begin{minipage}[t]{9.5cm}%
+\vspace{11.5cm}
+
+
+{\small{\textquotedblleft{} A primeira coisa a entender é que você
+não entende\textquotedblright{}.}}{\small \par}
+
+{\small{$\ \ \ \ \ \ \ \ \ \ \ \ \ $SOREN AABYE KIERKEGAARD}}%
+\end{minipage}\newpage{}
+
+\begin{center}
+\renewcommand\contentsname{\normalsize SUMÁRIO \vspace{1.5cm}}
+\tableofcontents
+\addtocontents{toc}{\protect\normalsize\addvspace{-1.5cm}}
+\end{center}
+
+\newpage{}
+
+\begin{center}
+\renewcommand\listfigurename{\normalsize LISTA DE ILUSTRAÇÕES}
+\listoffigures
+\addtocontents{lof}{\protect\addvspace{1.5cm}}
+\end{center}
+
+\newpage{}
+
+\begin{center}
+\renewcommand\listtablename{\normalsize LISTA DE TABELAS}
+\listoftables
+\addtocontents{lot}{\protect\addvspace{1.5cm}}
+\end{center}
+
+\newpage{}
+
+\begin{center}
+\textbf{LISTA DE SIGLAS}
+\par\end{center}
+
+\begin{tabular}{|c|c|}
+\hline 
+RN & Rede neural\tabularnewline
+\hline 
+\hline 
+RNA & Rede Neural Artificial\tabularnewline
+\hline 
+\end{tabular}
+
+\vspace{1.5cm}
+
+
+\newpage{}
+
+\begin{center}
+
+\renewcommand\abstractname{RESUMO} 
+\begin{abstract}
+\vspace{1.5cm}
+
+
+Redes neurais vem sendo utilizadas para a resolução de problemas de
+decisão com grande sucesso, especialmente problemas de informação
+imperfeita ou ruidosa, dos quais o pôquer é um exemplo. Neste trabalho,
+orientado ao jogo do pôquer \textit{Texas Hold'em}, é proposta a utilização
+de várias redes neurais na modelagem de oponentes para permitir uma
+melhor análise de perfis de jogadores para a formulação implícita
+de contra-estratégias pela rede. A adequação de redes neurais nesses
+casos já foi comprovada em diversos trabalhos.
+
+Palavras-chave: redes neurais, aprendizado de máquina, pôquer.
+\end{abstract}
+\end{center}
+
+\newpage{}
+
+\begin{center}
+
+\renewcommand\abstractname{ABSTRACT} 
+\begin{abstract}
+\vspace{1.5cm}
+
+
+Keywords: Neural networks, machine learning, poker.
+\end{abstract}
+\end{center}
+
+\newpage{}
+
+
+\section{INTRODUÇÃO}
+
+\noindent \indent
+
+Devido às características imperfeitas do jogo, o pôquer vem sendo
+estudado na área de aprendizado de máquina. O objetivo desses estudos
+é construir agentes autônomos que sejam capazes de jogar segundo alguma
+estratégia. A maior parte dos estudos na área advém do grupo de inteligência
+artificial aplicada ao pôquer da Universidade de Alberta. Uma parte
+dos estudos e implementações de software de pôquer faz uso de estratégias
+e contra-estratégias baseadas na teoria de equilíbrio de Nash \cite{key-2},
+com algoritmos de avaliação sendo utilizados principalmente com o
+objetivo de selecionar a estratégia mais interessante para a situação
+atual dentre estas estratégias conforme resposta do oponente, de modo
+a se manter a menor quantidade de tempo possível em uma estratégia
+que se é percebida como não-ideal. Esta abordagem é baseada mais fortemente
+no fundamento matemático da teoria do jogo do que no melhoramento
+da estratégia em si.
+
+Contudo, mesmo o software baseado em estratégias fixas se vale, em
+alguns casos, da utilização de algoritmos de aprendizado de máquina
+baseados em redes neurais para realizar ao menos a modelagem dos oponentes
+\cite{key-3} de modo a prever as probabilidades de o oponente responder
+de certa forma dado seu histórico de jogadas, como no caso de uma
+das máquinas descritas em \cite{opponent_modeling}, em que a abordagem
+utilizada para construção do agente-fim não é descrita, contudo, redes
+neurais são usadas para prever as jogadas do oponente, iniciando-se
+com uma rede limpa que é consequentemente adaptada à medida que o
+oponente age. Uma desvantagem dessa utilização da rede neural é a
+possível infactibilidade de se treinar a rede satisfatoriamente em
+tempo real em um ambiente com agentes humanos. Mesmo com essa desvantagem,
+a modelagem de redes neurais mostra-se mais acurada do que uma modelagem
+baseada puramente em pesos relativos a cada tupla ação-mão possível
+como a mostrada em \cite{opponent_modeling_old}.
+
+Uma abordagem em que o agente objetivo-fim do estudo é de fato baseado
+em redes neurais está descrita em \cite{key-4}, contudo sem tomar
+em consideração as especificidades do modo com que o oponente joga,
+levando a uma abordagem relativamente simples no que concerne a modelagem
+em si da rede, focando na evolução dos agentes pré-determinados via
+combinação dos mesmos e utilização de heurísticas co-evolucionárias
+como halls da fama para realizar a seleção dos agentes que mais se
+adaptassem, descartando modelos menos eficientes.
+
+\vspace{1.5cm}
+
+
+
+\subsection{MOTIVAÇÃO}
+
+\noindent \indent
+
+A utilização de redes neurais aplicadas a problemas de decisão em
+casos em que pode-se utilizar de grandes quantidades de tempo para
+realizar o treinamento da rede e no qual existe quantidade suficiente
+de dados para a realização do mesmo. O \textit{Texas Hold'em}, em
+princípio, parece não se prestar exatamente ao modelo necessário para
+a utilização de redes neurais, uma vez que dada uma mesma entrada,
+não existe uma resposta 'correta', dado que a adequação de qualquer
+resposta é dependente da subsequente ação tomada pelo adversário.
+Deste modo, em qualquer modelo de rede neural (RN) utilizado no pôquer
+para propósitos distintos da mera modelagem de um oponente (dado seu
+histórico) para uso em outra aplicação, faz-se necessario utilizar
+alguma técnica de modo a prever as respostas mais prováveis do oponente
+a cada ação tomada, podendo assim julgar sua adequação, possibilitando
+assim uma análise mais acurada.
+
+\vspace{1.5cm}
+
+
+
+\subsection{OBJETIVO}
+
+\noindent \indent
+
+No presente trabalho, tenciona-se melhorar a maneira com que uma análise
+prévia do oponente pode ser utilizada como entrada adicional para
+uma rede neural de forma a conseguir classificá-lo em um dentre uma
+série de perfis distintos pré-gerados e treinados, também modelados
+utilizando redes neurais, informação esta que será utilizada como
+parâmetro de entrada pela rede de modo a conseguir gerar uma contra-estratégia
+para um determinado perfil de oponente.
+
+\vspace{1.5cm}
+
+
+
+\subsection{JUSTIFICATIVA}
+
+\noindent \indent
+
+Redes neurais tem se mostrado ferramentas úteis tanto para a modelagem
+de oponentes no pôquer quanto para a resolução de problemas de decisão,
+como já foi mostrado em trabalhos correlatos.%
+\begin{comment}
+QUAIS trABALHOS?
+\end{comment}
+{} Contudo, as implicações decorrentes da utilização de uma rede neural
+como agente \textit{stand-alone }capaz de jogar competitivamente ainda
+não foram exploradas. Apesar da utilização de uma rede neural como
+estratégia de jogo estar condicionada aos jogadores cujos jogos forem
+usados para treinar a rede, estando deste modo sujeitos a certa exploração
+por parte de um oponente que jogasse de modo anormal quando comparado
+com os oponentes do jogador base nos jogos utilizados para testar
+a rede. A utilização de perfis de jogadores e a subsequente classificação
+dos oponentes dentre estes perfis pode ser utilizada de modo a diminuir
+o impacto desta potencial fraqueza.
+
+\vspace{1.5cm}
+
+
+
+\subsection{METODOLOGIA}
+
+\noindent \indent
+
+Primeiramente, realizaram-se estudos teóricos objetivando o levantamento
+de dados sobre redes neurais como técnica de aprendizado de máquina,
+além do estudo do jogo do pôquer em si. Em seguida, foram construídas
+a topologia da rede a ser utilizada para modelar o oponente e a diagramação
+de classes do sistema como um todo.
+
+\vspace{1.5cm}
+
+
+
+\subsection{ESTRUTURA}
+
+\noindent \indent
+
+No capítulo 2, será apresentada a fundamentação teórica acerca de
+redes neurais mínima necessária para o entendimento do trabalho. No
+capítulo 3, um breve resumo das regras do pôquer \textit{Texas Hold'em}
+destinado ao leitor que não é familiarizado com o mesmo. No capítulo
+4, é mostrada a topologia a ser utilizada pela rede de simulação do
+oponente. No capítulo 5, é descrita a interface com o banco de dados
+de mãos e as heurísticas utilizadas para selecionar os jogadores utilizados
+para compor o conjunto de treinamento de cada perfil, bem como os
+jogadores utilizados para treinar a RN objetivo-fim.
+
+\newpage{}
+
+
+\section{REDES NEURAIS}
+
+\noindent \indent
+
+Uma importante técnica de aprendizado de máquina atualmente, é a estrutura
+conhecida como rede neural, que consiste em formar uma rede de unidades
+de processamento que enviam mensagens umas as outras, tentando imitar
+o funcionamento do cérebro humano. Por esse motivo, é a técnica que
+mais auxilia no entendimento da inteligência humana, e que se espera
+obter uma inteligência artificial mais próxima daquela \cite{key-5-2}. 
+
+\vspace{1.5cm}
+
+
+
+\subsection{HISTÓRICO}
+
+\noindent \indent
+
+As primeiras informações sobre neurocomputação surgiram em 1943, em
+artigos de McCulloch \& Pitts , que inauguraram o estudo de redes
+neurais. Os autores fizeram uma analogia entre células nervosas vivas
+e o processo eletrônico, simulado o comportamento do neurônio natural,
+no qual o neurônio possuía uma saída que era uma função da soma de
+valor de suas diversas entradas. Eles introduziram o cálculo de pesos
+e unidades limiares. 
+
+Em 1948, o livro \textquotedblleft{}Cybernetics\textquotedblright{}
+de Wiener descreve alguns conceitos sobre controle, comunicação e
+processamento estatístico de sinais. 
+
+Em 1950, por meio do livro \textquotedblleft{}The Organization of
+Behavior\textquotedblright{}, Hebb descreveu um sistema de aprendizado
+por correlação dos neurônios que acabou dando origem a Regra de Aprendizagem
+de Hebb. No ano seguinte, Minsky construiu o primeio neuro computador. 
+
+Em 1956, a Inteligência Artificial foi oficialmente criada por McCarthy,
+Minsky, Shannon, Newell \& Simon, Samuel e outros. Em Darthmouth College
+nasceram os dois paradigmas da IA: a simbólica, que tenta simular
+o comportamento inteligente humano desconsiderando os mecanismos responsáveis
+por tal, e a conexionista, que acredita que construíndo-se um sistema
+que simule a estrutura do cerébro, este sistema apresentará inteligência. 
+
+No ano seguinte, Rosenblatt criou o Perceptron, um modelo cognitivo
+que consistia de unidades sensoriais conectadas a uma única camada
+de neurônios de McCulloch \& Pitts, demonstrando que se fossem acrescidas
+sinapses ajustáveis, as redes neurais de McCulloch \& Pitts podem
+ser treinadas para classificar padrões em classes linearmente separáveis,
+convergindo em um número limitado de passos. 
+
+Em 1969, Minsky e Papert publicam \textquotedblleft{}Perceptron\textquotedblright{},
+que expõe as limitações do modelo de Rosenblatt, provando que tais
+redes não são capazes de resolver uma ampla classe de problemas devido
+às restrições de representam, tendo impacto devastador no interesse
+dos pesquisadores sobre redes neurais. 
+
+Na década de 1970 não houve avanços devido a pouca credibilidade dos
+recentes estudos na área. 
+
+Em 1982, a introdução do modelo conexionista permitiu esclarecer boa
+parte das dúvidas até então existentes em relação ao processo dinâmico
+executado por certas redes neurais. Em meados da década de 1980 surgiu
+a descrição do algoritmo de treinamento \textit{backpropagation},
+que se baseia na retropropagação dos erros para realizar os ajustes
+de pesos das camadas intermediárias. A área de redes neurais teve
+um desenvolvimento explosivo após a publicação em 1986 do \textquotedblleft{}Parallel
+Distributed Processing\textquotedblright{} editado por Rummerlhart
+\& McClelland, com a multiplicação exponencial de teses e artigos
+cientifícos. 
+
+Na década de 1990 ocorreu a integração da pesquisa de redes neurais
+à corrente principal da inteligência artificial. 
+
+Nos anos 2000 as redes neurais foram vistas como um das técnicas de
+aprendizado de máquina, e não necessariamente como a melhor técnica
+para muitos problemas.
+
+\vspace{1.5cm}
+
+
+
+\subsection{CÉREBRO HUMANO}
+
+\noindent \indent
+
+O cérebro humano é composto por unidades chamadas neurônios, cerca
+de 100 bilhões dessas unidades trabalham em paralelo, enviando sinais
+eletroquímicos uns aos outros. Apesar de cada neurônio trabalhar na
+faixa de menos de 1 kHz (uma taxa muito baixa se comparado a um computador
+moderno que trabalha em GHz), seu poder de processamento é muito elevado
+devido às múltiplas conexões entre eles e pela comunicação rápida,
+que permite que os 10\textonesuperior{}\textonesuperior{} neurônios
+trabalhem ao mesmo tempo.
+
+A estrutura de um neurônio pode ser dividida em 3 partes: dendritos,
+corpo celular, axônio (\ref{fig:neuronio}).
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.7]{imagens/neuronio.JPG}
+\par\end{centering}
+
+\caption{\label{fig:neuronio}Esquema de um neurônio}
+\end{figure}
+
+
+Os dendritos recebem sinais elétricos dos outros neurônios através
+das sinapses, que são impulsos nervosos (estímulos) enviados através
+de ativadores químicos. O corpo celular processa as informações, definindo
+pesos para as conexões e enviando uma resposta para outro neurônio
+através do axônio.
+
+Conjuntos de redes de neurônios, são agrupados em áreas de responsabilidades
+como cerebelo, hipotálamo, córtex, etc. Aumentando a complexibilidade
+do sistema e intensificando o poder de processamento do cérebro, mas
+isso foge do escopo das redes neurais tradicionais.
+
+\vspace{1.5cm}
+
+
+
+\subsection{COMPONENTES DAS REDES NEURAIS COMPUTACIONAIS}
+
+\noindent \indent
+
+As redes neurais computacionais, ou redes neurais artificiais (RNA),
+são feitas a partir de vários neurônios artificiais, que é um modelo
+eletrônico do neurônio biológico, como representado na figura \ref{fig:neuronio-artificial}.
+
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.5]{imagens/neuronioartificial}\caption{\label{fig:neuronio-artificial}Esquema de um neurônio artificial}
+\end{figure}
+
+
+É possível destrinchar esse funcionamento do neurônio artificial em
+4 componentes principais: as conexões, o núcleo de processamento,
+as funções de limiar e os padrões.
+
+\vspace{1.5cm}
+
+
+
+\subsubsection{CONEXÕES}
+
+\noindent \indent
+
+Imaginando a RNA como um grafo monodirecionado, tem-se as conexões
+entre os nós fazendo o papel dos axiônios (ao enviar a informação
+de saída de um neurônio) e dos dendritos, (associando um peso a cada
+entrada). Esse peso nada mais é que um valor que será ajustado durante
+o treinamento da rede neural, podendo ser positivos (excitam a entrada)
+ou negativos (inibem a entrada). A informação percorre esse grafo
+por essas conexões para chegar aos núcleos de processamento para ser
+analisada. 
+
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.5]{imagens/grafo}\caption{\label{fig:grafo}RNA na forma de grafo}
+\end{figure}
+
+
+\vspace{1.5cm}
+
+
+
+\subsubsection{NÚCLEO DE PROCESSAMENTO}
+
+\noindent \indent
+
+O núcleo de processamento é a parte da rede neural onde é realizado
+o processamento das entradas vindas das conexões. Na analogia com
+o grafo, um núcleo de processamento seria um nó com várias entradas
+e uma única saída, obtida pelo processamento das informações de entrada,
+geralmente uma combinação linear destas ou uma análise comparativa
+dessa combinação. Essa saída só pode depender dos elementos de entrada,
+sem influência de dados externos e deve ser único.
+
+As diversas funções que podem ser utilizadas para estabelecer essa
+transferência entre neurônios, são chamadas de funções de limiar e
+são abordadas no item a seguir.
+
+\vspace{1.5cm}
+
+
+
+\subsubsection{FUNÇÕES DE LIMIAR}
+
+\noindent \indent
+
+As funções de limiar, ou funções para transferência de sinais entre
+neurônios, são aquelas que determinam a intensidade e a forma que
+os valores são alterados para serem transmitidos entre eles. Destacam-se
+cinco tipos: a linear, a \textit{step}, a em rampa, a gaussiana e
+a sigmoid. 
+\begin{itemize}
+\item A função linear é uma equação linear da forma $f=a.x+b$, onde a é
+a inclinação da reta.
+\end{itemize}
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.5]{imagens/flinear}\caption{\label{fig:funclinear}Função Linear}
+\end{figure}
+
+\begin{itemize}
+\item A \textit{step}, é uma função que possui um resultado binário, ou
+seja, de apenas dois valores possíveis. Assim ela tem a forma $f(x)=p+q.u(x-j)$,
+onde $u$ é a função de \textit{Heaviside}. Essa função também é conhecida
+como \textit{hard-limiter}. Uma desvantagem do uso dessa função é
+que quaisquer ajustes feitos nos pesos que alimentam os neurônios
+com o uso desta função terão efeitos não tão eficientes e limitados,
+devido a sua descontinuidade acentuada.
+\end{itemize}
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.7]{imagens/fstep}\caption{\label{fig:funcstep}Função Step}
+\end{figure}
+
+\begin{itemize}
+\item A função de limiar em rampa é semelhante à função \textit{step}, mas
+a transição entre um valor e outro não é instantânea, devendo haver
+uma fase de transição entre 2 valores, atenuando o problema citado
+acima. Sendo $f(x)=\gamma$ para $x>z$, $f(x)=-\gamma$ para $x<z$
+e para valores no intervali $(-z,z)$ $f(x)$ varia entre $-\gamma$
+e $\gamma$, como mostra a figura \ref{fig:funcrampa}.
+\end{itemize}
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.4]{imagens/frampa}\caption{\label{fig:funcrampa}Função Rampa}
+\end{figure}
+
+\begin{itemize}
+\item A gaussiana é uma função que se baseia em um ponto médio e uma variância
+pré-definida $f(x)=e(\lyxmathsym{\textminus}x^{2}/v)$, onde v é a
+variância. Seu gráfico é apresentado na figura \ref{fig:funcgaussiana}.
+\end{itemize}
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.35]{imagens/fgaussian}\caption{\label{fig:funcgaussiana}Função Gaussiana}
+\end{figure}
+
+\begin{itemize}
+\item A função \textit{sigmoid} é uma variante da função em rampa, com a
+vantagem de diminuir mais ainda o problema da função step, deixando-a
+totalmente continua. Essas características permitem uma transição
+gradual e não linear entre dois estados. Este tipo de função é utilizada
+também em outras áreas como sociologia e química. 
+\end{itemize}
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.6]{imagens/fsigmoid}\caption{\label{fig:funcsigmoid}Função Sigmoid}
+\end{figure}
+
+
+Neste trabalho será utilizada a função de limiar \textit{sigmoid},
+com uma otimização que é muito utilizada no ramo das redes neurais,
+que é mudar os limites da função para não trabalhar com números negativos,
+serão usados os valores da sigmoid variando entre 0 e 1, sendo aceito
+e não aceito respectivamente.
+
+\vspace{1.5cm}
+
+
+
+\subsubsection{PADRÕES}
+
+\noindent \indent
+
+Os padrões são os dados que alimentam a RNA. Podem ser valores numéricos,
+imagens, caracteres, entre outros, que serão posteriormente transformados
+em números. A um determinado padrão de entrada corresponde um sinal
+de saída, sendo que o tipo do padrão de entrada pode ser diferente
+do padrão de saída. Nestes casos torna-se essencial um pré-processamento
+das informações, ou seja, a seleção e representação correta das características
+do padrão a ser aplicado pode afetar a performance da rede. Assim,
+para um bom desempenho da rede neural, deve-se optar pelo melhor conjunto
+de características para os padrões.
+
+\vspace{1.5cm}
+
+
+
+\subsection{CLASSIFICAÇÕES DE REDES NEURAIS}
+
+\noindent \indent
+
+Não há um modo oficial de se classificar uma rede neural, mas existem
+classificações já consagradas quanto a 3 de suas características:
+tipo de aprendizado, tipo de entradas e forma de conexão.
+
+Tipo de aprendizado identifica se na rede existe uma definição para
+o que se espera na saída, assim sendo utilizada para ajustar os pesos
+das entradas, neste caso a RNA é de aprendizado supervisionado, caso
+contrário é de auto-aprendizado.
+
+Os tipos de entrada podem ser intervalar, onde as entradas são de
+forma contínua, ou seja, aceitam qualquer valor como entrada, ou podem
+ser discretas, como por exemplo uma entrada binária.
+
+Existem três tipos de forma de conexão, que é a forma como os neurônios
+estão conectados e como é a transmissão de dados. Na alimentação competitiva,
+os neurônios de uma mesma vizinhança recebem as mesmas entradas e
+competem entre si para ser a única saída. 
+
+Na alimentação à frente, a rede é dividida em camadas onde as saídas
+de uma servem como entradas para a próxima camada.
+
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.5]{imagens/feedforward}\caption{\label{fig:feedforward}Conexão feed-forward}
+\end{figure}
+
+
+Na retro-alimentação, os sinais de saída são utilizadas para alimentar
+camadas anteriores.
+
+Neste trabalho será utilizado um modelo de de alimentação à frente,
+com aprendizado supervisionado e entrada intervalar, conhecido como
+backpropagation. Esse modelo é baseado em outro modelo mais simples
+chamado adaline, e ambos os modelos estão explicitados nos itens subsequentes.
+
+\vspace{1.5cm}
+
+
+
+\subsection{ADALINE}
+
+\noindent \indent
+
+Adaline (Adaptative Linear Network), como seu nome diz utiliza um
+combinador adaptativo linear, onde a saída de cada neurônio é a combinação
+linear das entradas multiplicadas por um peso, seguindo a fórmula
+$S(t)=\sum_{i=0}^{n-1}p_{i}(t)e_{i}(t)$, onde S é a saída, $e_{i}$
+são os elementos do vetor de entradas e $p_{i}$ seus respectivos
+pesos.
+
+A regra de adaptação de pesos utilizada no adaline pode ser o algoritmo
+perceptron ou o $\alpha-LMS$, a diferença entre eles está na fórmula
+do peso e do erro, onde o perceptron utiliza as fórmulas de pesos
+$p(t+1)=p(t)+\alpha(\varepsilon(t)/2)e(t)$ e erro $\varepsilon(t)=d(t)\lyxmathsym{\textminus}f_{limiar}(S(t))$.
+Já o $\alpha-LMS$ utiliza pesos como sendo $p(t+1)=p(t)+\alpha(\varepsilon(t)e(t)/(|e(t)|^{2}))$
+e para o cálculo do erro utiliza $\varepsilon(t)=d(t)\lyxmathsym{\textminus}S(t)$.
+Onda $\alpha$ é o coficiente de aprendizado, $\varepsilon$ o erro
+e $d$ é a saída esperada.
+
+A rede adaline tem como vantagem sua simplicidade, pois a entrada
+não necessita de um pré-processamento complexo e são poucos parâmetros
+a serem ajustados, mas ela possui a limitação de conseguir apenas
+reconhecer padrões mais simples, necessitando de adaptações para análises
+mais complexas.
+
+\vspace{1.5cm}
+
+
+
+\subsection{\textit{BACKPROPAGATION}}
+
+\noindent \indent
+
+O \textit{backpropagation} é um modelo composto por três ou mais camadas
+de adalines interconectados, que utilizam como função limiar a \textit{sigmoid}.
+Por utilizar uma função contínua, o poder de classifiação da rede
+é melhorado.
+
+A atualização dos pesos neste modelo, é feita iniciando-se pelo erro
+da saída da última camada, e a partir daí são calculados os erros
+das camadas anteriores deste fato vem o nome backpropagation (retropropagação).
+
+O erro da útima saída é dado por $\varepsilon_{i}(t)=S(t)(1\text{\textminus}S(t))(di(t)\text{\textminus}S(t))$
+e com ele são ajustados os pesos da última camada por $p_{i}(t+1)=p_{i}(t)+\alpha\varepsilon i(t)e_{n}(t)$.
+À partir dele os erros das camadas anteriores podem ser calculados
+com $\varepsilon_{i}(t)=e_{n}(t)(1\text{\textminus}e_{n}(t))\underset{k}{\sum}\varepsilon_{k}p_{ik}(t)$,
+onde $k$ são os neurônios conectados à seguir ao nó atual e $p_{ik}$
+é o peso associado a esta ligação. E com este erro recalcula-se os
+pesos das camadas intermediárias $p_{i}(t+1)=p_{i}(t)+\alpha\varepsilon_{i}(t)e_{n}(t)+\mu(p_{i}(t)\text{\textminus}p_{i}(t\text{\textminus}1))$
+onde $\mu$ é o momentum, coeficiente de aceleração do aprendizado.
+
+A topologia do backpropagation é um adaline expandido com camadas
+intermediárias como na figura \ref{fig:Topologia-Backpropagation}.
+
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.55]{imagens/backpropagation}\caption{\label{fig:Topologia-Backpropagation}Topologia Backpropagation}
+\end{figure}
+
+
+A vantagem do modelo é que ele abrange uma grande quantidade de padrões
+que podem ser utilizados, e por este motivo foi escolhido para este
+trabalho.
+
+\newpage{}
+
+
+\section{O PÔQUER}
+
+\noindent \indent
+
+O pôquer é um jogo de cartas jogado por duas ou mais pessoas, no qual
+os jogadores com as cartas total ou parcialmente escondidas fazem
+apostas em um pote central e após o fim das apostas, o pote central
+é atribuído ao jogador que possuir o melhor conjunto de cartas dentre
+os que permaneceram na jogada, ou ao único que restou caso todos os
+outros tenham desistido. Pôquer é um banco de ensaio interessante
+para pesquisas em inteligência artificial, pois é um jogo de informações
+imperfeitas, onde os múltiplos agentes concorrentes têm de lidar com
+conhecimento probabilístico, avaliação de risco e a possível fraude,
+assim como são as decisões feitas no mundo real. A modelagem do oponente
+é um outro problema difícil em aplicações de tomada de decisão, sendo
+essencial para alcançar alto desempenho no pôquer.
+
+\vspace{1.5cm}
+
+
+
+\subsection{BARALHO}
+
+\noindent \indent
+
+O pôquer é jogado com um barulho comum, de 52 cartas, divididas em
+4 grupos, chamados naipes. Os naipes são identificados por nomes:
+ouros , copas, paus e espadas e seus símbolos, representados na figura
+\ref{fig:naipes}.
+
+\begin{figure}[H]
+\caption{\label{fig:naipes}Ouros, copas, paus e espadas}
+\end{figure}
+
+
+No pôquer os naipes possuem o mesmo valor, ou seja, o naipe da carta
+nunca é critério de desempate no pôquer. Cada naipe possui 13 cartas
+em ordem decrescente de valor: o ás (A), o rei (K), a dama(Q), o valete
+(J) e os números de 10 a 2, como é ilustrado na figura \ref{fig:naipecopas}.
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/naipe-de-copas}\caption{\label{fig:naipecopas}Ordem decrescente de valor}
+\end{figure}
+
+
+\vspace{1.5cm}
+
+
+
+\subsection{RANKING DE COMBINAÇÕES DE CARTAS}
+
+\noindent \indent
+
+O ranking das combinações de 5 cartas no pôquer é exibido a seguir
+em ordem crescente de valor:
+
+Carta maior: quando não há nenhuma combinação, para efeito de desempate,
+ganha o que possuir a carta de maior valor. 
+
+Par: Um par de cartas, isto é, duas cartas iguais. Se mais de um jogador
+tiver um par, então ganha quem tiver o par de cartas de maior valor.
+Caso ambos tenham o mesmo par, então aquele que possuir a carta de
+maior valor fora do par é o vencedor. Essa carta de desempate é chamada\textit{
+kicker }(Figura \ref{fig:par}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/par}\caption{\label{fig:par}Par de dez}
+\end{figure}
+
+
+Dois pares: Dois pares de cartas. Se mais de um jogador tiver um dos
+pares iguais, então ganha quem tiver o segundo par com o valor mais
+alto. Caso ambos tenham os mesmos dois pares, então aquele que tiver
+a quinta carta (\textit{kicker}) de maior valor é o vencedor (Figura
+\ref{fig:doispares}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/dois-pares}\caption{\label{fig:doispares}Dois pares de sete com quatro}
+\end{figure}
+
+
+Trinca: Três cartas iguais. Se mais de um jogador tiver esse jogo,
+então ganha quem tiver a trinca com uma carta de maior valor (Figura
+\ref{fig:trinca}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/trinca}\caption{\label{fig:trinca}Trinca de cinco}
+\end{figure}
+
+
+Sequência (\textit{Straight}): Cinco cartas em sequência. O ás pode
+ser a maior carta ao lado do rei ou a menor carta ao lado do 2. Se
+mais de um jogador tiver uma sequência, então ganha aquele que tiver
+a sequência com cartas de maior valor. Caso ambos tenham a mesma sequência,
+então é considerado empate (Figura \ref{fig:sequencia}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/straight}\caption{\label{fig:sequencia}Sequência de dez a ás}
+\end{figure}
+
+
+\textit{Flush}: Cinco cartas do mesmo naipe, mas não em sequência.
+Se mais de um jogador tiver um \textit{flush}, então ganha aquele
+que tiver a carta de maior valor (Figura \ref{fig:flush}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/flush}\caption{\label{fig:flush}\textit{Flush} de espadas}
+\end{figure}
+
+
+\textit{Full House}: Um par junto com uma trinca de cartas. Se mais
+de um jogador tiver um \textit{full house}, então ganha aquele que
+tiver a trinca com cartas de maior valor (Figura \ref{fig:fullhouse}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/full-house}\caption{\label{fig:fullhouse}\textit{Full House} de dama com dois}
+\end{figure}
+
+
+Quadra (\textit{Four}): Quatro cartas iguais. Se mais de um jogador
+tiver uma quadra, então ganha aquele que tiver a quadra com uma carta
+de maior valor (Figura \ref{fig:quadra}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/four}\caption{\label{fig:quadra}Quadra de rei}
+\end{figure}
+
+
+\textit{Straight Flush}: Sequência de cinco cartas do mesmo naipe.
+Se mais de um jogador tiver um \textit{straight flush}, então ganha
+aquele que tiver a sequência com cartas de maior valor (Figura \ref{fig:straightflush}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/straight-flush}\caption{\label{fig:straightflush}\textit{Straight Flush}}
+\end{figure}
+
+
+Royal Straight Flush: As cinco cartas de maior valor do mesmo naipe.
+Um Royal Straight Flush é simplesmente um straight flush com um Ás
+como carta mais alta. É a combinação mais forte do pôquer (Figura
+\ref{fig:royalflush}).
+
+\begin{figure}[H]
+\centering{}\includegraphics{/home/paulo/ime/pfc/pfc-texas-holdem/relatorio/imagens/royal-flush}\caption{\label{fig:royalflush}\textit{Royal Straight Flush}}
+\end{figure}
+
+
+\vspace{1.5cm}
+
+
+
+\subsection{AÇÕES}
+
+\noindent \indent
+
+No pôquer, os jogadores possuem disponíveis as seguintes ações: passar
+(\textit{check}), desistir (\textit{fold}), apostar (\textit{bet}),
+pagar (\textit{call}) e aumentar (\textit{raise}). 
+
+Um jogador ao passar está apenas passando a vez a outro jogador, e
+não renunciando ao pote central. Se ainda não houver apostas na rodada
+atual, o jogador pode passar a vez, e se todos os jogadores passarem
+na rodada, então a rodada é considerada completa.
+
+Um jogador pode desistir da jogada, renunciando o interesse ao pote
+central.
+
+Caso nenhuma aposta tenha sido feita ainda na rodada atual, um jogador
+pode apostar. Se um jogador apostar, o jogador adjacente (no sentido
+horário) tem três opções: desistir, pagar ou aumentar. A rodada só
+termina depois que todos os jogadores tenham igualado suas apostas,
+ou caso nenhum jogador pague a aposta feita por outro jogador, que
+se torna o vencedor da rodada. 
+
+Um jogador paga quando iguala a aposta feita por outro jogador na
+rodada. 
+
+Quando um jogador não só iguala a aposta de outro jogador, mas também
+acrescenta, ele está aumentando a aposta. Todos os jogadores subsequentes
+deverão pagar o maior valor apostado, ou aumentar ainda mais, se quiserem
+continuar na jogada.
+
+Quando a última aposta ou aumento na rodada final for igualada, ocorre
+a abertura de cartas. É nesse momento que se determina o vencedor
+do pote, uma vez que as combinações de cartas de cada jogador são
+mostradas uma a uma.
+
+\vspace{1.5cm}
+
+
+Existem diversas variantes do pôquer, dentre as quais pode-se categorizar
+livremente em: pôquer aberto, pôquer fechado e \textit{community card
+poker}, dentre outras. O estilo de pôquer conhecido como Texas-Hold'em
+é um tipo de \textit{community card poker}, onde existem cartas abertas
+para uso de todos os jogadores. Ele é atualmente o pôquer mais conhecido
+e jogado nos cassinos e torneios, e consequentemente com maior quantidade
+de estudo acerca do mesmo, fator pelo qual será utilizado como base
+no presente trabalho.
+
+No \textit{Texas Hold`em} os jogadores recebem duas cartas fechadas
+e são dispostas cinco cartas fechadas sobre a mesa. Para vencer, o
+jogador deve combinar suas duas cartas fechadas com três das cinco
+abertas ou a melhor combinação, podendo usar as cinco cartas comunitárias.
+Ao contrário do pôquer aberto tradicional, as cartas abertas são as
+mesmas para todos os participantes.Existem um total de quatro rodadas
+de apostas. Antes do início das rodadas de apostas, os dois jogadores
+à esquerda do crupiê (\textit{dealer}) devem fazer apostas obrigatórias,
+conhecidas como \textit{Big Blind} e \textit{Small Blind}. O \textit{Small
+Blind} paga metade do \textit{Big Blind}. 
+
+Na primeira rodada cada jogador recebe duas cartas fechadas e é feita
+a primeira rodada de apostas. O jogador à esquerda do \textit{Big
+Blind} poderá desistir, pagar a aposta do\textit{ Big Blind} para
+entrar na jogada, ou aumentar a aposta. Os outros jogadores também
+optam por umas destas três ações.
+
+Ao final da primeira rodada de apostas, o crupiê apresenta o\textit{
+Flop}, isto é, abre as três primeiras cartas na mesa e inicia-se a
+segunda rodada de apostas pelo jogador à esquerda do crupiê. 
+
+Em seguida o crupiê apresenta o \textit{Turn}, isto é, abre a quarta
+carta na mesa, e inicia-se a terceira rodada de apostas. 
+
+Na última rodada, o crupiê apresenta o \textit{River}, isto é, abre
+a quinta e última carta fechada na mesa, e inicia-se a quarta e última
+rodada de apostas. Após o término da última rodada de apostas, os
+jogadores mostram seus jogos (\textit{showdown}) a começar pelo último
+que apostou ou que aumentou alguma aposta. Somente este jogador tem
+a obrigação de mostrar seu jogo, os demais podem deixar suas cartas
+escondidas se perceberem que não vencerão. 
+
+Existem algumas variações no \textit{Texas Hold'em} quanto ao limite
+máximo no valor de uma aposta. O \textit{No Limit Hold'em} permite
+o chamado \textit{all-in}, ou seja, apostar tudo que se tem. Entretanto,
+nenhuma aposta pode ser inferior ao valor apostado para entrar na
+partida. \newpage{}
+
+
+\section{ESTRUTURA DA SOLUÇÃO}
+
+
+\subsection{MODELAGEM DO OPONENTE}
+
+
+
+\noindent \indent
+
+Em primeiro lugar, será apresentada a topologia básica da rede neural
+utilizada na modelagem do oponente (assumindo uma mesa com tamanho
+máximo de 8 jogadores) nas tabelas \ref{tab:Par=0000E2metros-de-entrada-modelagem}
+e \ref{tab:Par=0000E2metros-de-sa=0000EDda-modelagem}. Para simplificar
+a modelagem matemática, foram ignorados alguns fatores que são de
+potencial influência sobre a ação do oponente, tal como a posição
+do mesmo na mesa, uma vez que a utilização da mesma implicaria em
+um encadeamento de previsões para prever as ações dos últimos jogadores
+na fila. Outra simplificação a ser realizada na classificação no decorrer
+de um jogo é assumir que as probabilidades de melhor mão estão identicamente
+distribuídas dentre os jogadores cujas mãos são desconhecidas e que
+estão remanescentes no jogo - deste modo, mesmo quando não se sabem
+as cartas do agente, pode-se utilizar alguma métrica de modo a estimar
+as ações do oponente. As saídas desta rede neural são representativas
+do perfil do jogador.
+
+\begin{table}[H]
+\centering{}%
+\begin{tabular}{|c|c|}
+\hline 
+Parâmetros de entrada & Domínio\tabularnewline
+\hline 
+\hline 
+Probabilidade de a mão ser a melhor da mesa $(\pi$) & 0$\leq$$\pi$$\leq$1\tabularnewline
+\hline 
+Inverso da quantidade de fichas possuída pelo jogador $(1/s)$ & $0\leq1/s\leq1$\tabularnewline
+\hline 
+Quantidade de jogadores $(n/8)$ & $0<n/8\leq1$\tabularnewline
+\hline 
+Inverso da quantidade de fichas possuída pelo i-ésimo oponente $(1/s_{i})$ & $0\leq1/s_{i}\leq1$\tabularnewline
+\hline 
+Inverso da quantidade de fichas no pote $(1/p)$ & $0<1/p<1$\tabularnewline
+\hline 
+Fase do jogo (em ordem, pre-flop, flop, turn, river) $(\phi/4)$ & $0\leq\phi\leq1$\tabularnewline
+\hline 
+\end{tabular}\caption{\label{tab:Par=0000E2metros-de-entrada-modelagem}Parâmetros de entrada
+da RN utilizada para modelar o oponente}
+\end{table}
+
+
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|}
+\hline 
+Parâmetros de entrada & Domínio\tabularnewline
+\hline 
+\hline 
+Fold? & $f_{r}\in\{0,1\}$\tabularnewline
+\hline 
+Call? & $k_{r}\in\{0,1\}$\tabularnewline
+\hline 
+Raise? & $c_{r}\in\{0,1\}$\tabularnewline
+\hline 
+Fração do pote a ser apostada em raise  & $0\leq r/p\leq1$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{\label{tab:Par=0000E2metros-de-sa=0000EDda-modelagem}Parâmetros de
+saída da RN utilizada para modelar o oponente}
+\end{table}
+
+
+\vspace{1.5cm}
+
+
+
+\subsection{REDE PRINCIPAL E CLASSIFICAÇÃO EM PERFIS}
+
+A topologia da rede principal é similar, contudo, não há necessidade
+de se estimar a probabilidade de haver a melhor mão, uma vez que presumimos
+que se sabem as cartas na mão. Para cada potencial oponente (até um
+máximo de 7) serão adicionadas as informações de perfil adquiridas
+nos perfis que melhor se encaixarem às informações da tabela 4.1.
+As jogadas utilizadas para classificar o perfil seguirão um esquema
+de janela deslizante, de modo a evitar que um oponente que troque
+de estratégia com frequência seja constantemente classificado de forma
+incorreta. Deste modo,também descrevemos, uma outra rede de modo a
+classificar os jogadores em perfis, com sua topologia descrita nas
+tabelas \ref{tab:Par=0000E2metros-de-entrada-perfilamento} e \ref{tab:Par=0000E2metros-de-sa=0000EDda-perfilamento}.
+
+\begin{table}[H]
+\centering{}%
+\begin{tabular}{|c|c|}
+\hline 
+Parâmetros de entrada & Domínio\tabularnewline
+\hline 
+\hline 
+Probabilidade de a mão ser a melhor da mesa $(\pi$) & 0$\leq$$\pi$$\leq$1\tabularnewline
+\hline 
+Inverso da quantidade de fichas possuída pelo jogador $(1/s)$ & $0\leq1/s\leq1$\tabularnewline
+\hline 
+Quantidade de jogadores $(n/8)$ & $0<n/8\leq1$\tabularnewline
+\hline 
+Inverso da quantidade de fichas possuída pelo i-ésimo oponente $(1/s_{i})$ & $0\leq1/s_{i}\leq1$\tabularnewline
+\hline 
+Inverso da quantidade de fichas no pote $(1/p)$ & $0<1/p<1$\tabularnewline
+\hline 
+Fase do jogo (em ordem, pre-flop, flop, turn, river) $(\phi/4)$ & $0\leq\phi\leq1$\tabularnewline
+\hline 
+Opontente deu fold? & $f_{r}\in\{0,1\}$\tabularnewline
+\hline 
+Oponente deu call? & $k_{r}\in\{0,1\}$\tabularnewline
+\hline 
+Oponente deu raise? & $c_{r}\in\{0,1\}$\tabularnewline
+\hline 
+Fração do pote que foi apostada em raise  & $0\leq r/p\leq1$\tabularnewline
+\hline 
+\end{tabular}\caption{\label{tab:Par=0000E2metros-de-entrada-perfilamento}Parâmetros de
+entrada da RN utilizada para classificar o oponente para cada uma
+das jogadas em uma janela deslizante}
+\end{table}
+
+
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|}
+\hline 
+Parâmetros de entrada & Domínio\tabularnewline
+\hline 
+\hline 
+Melhor perfil ($i)$ & $0<i/n\leq1$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{\label{tab:Par=0000E2metros-de-sa=0000EDda-perfilamento}Parâmetros
+de saída da RN utilizada para classificar o oponente}
+\end{table}
+
+
+Para representar a estrutura da solução, utilizaram-se os seguintes
+diagramas de classe apresentados nas figuras \ref{fig:Diagrama-das-classes},
+\ref{fig:Diagrama-de-classes-basicas} e \ref{fig:Diagrama-de-classe-fachada},
+descrevendo as classes utilizadas na API de aprendizado e na interface
+com o banco de dados de mãos.
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.45]{imagens/cdlearning}
+\par\end{centering}
+
+\caption{\label{fig:Diagrama-das-classes}Diagrama das classes utilizadas no
+aprendizado}
+\end{figure}
+
+
+\newpage{}
+
+
+\section{SELEÇÃO DE JOGADORES PARA TREINAMENTO DA REDE}
+
+\indent
+
+Para realizar o treinamento da rede, serão usados um ou mais banco
+de dados de mãos de jogos já existentes, que serão unificados em uma
+única estrutura de dados apresentada na figura \ref{fig:Diagrama-das-classes}
+e inseridos em um banco de dados MySQL. Para realizar a interface
+com o banco de dados, utilizar-se-á a estrutura de classes descritas
+nas figuras \ref{fig:Diagrama-de-classes-basicas} e \ref{fig:Diagrama-de-classe-fachada}.
+Utilizaremos os padrões de DAO (\textit{data access object}) e fachada
+para realizar este interfaceamento.
+
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.45]{imagens/cddatamodel}\caption{\label{fig:Diagrama-de-classes-basicas}Diagrama de classe para as
+classes básicas}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.45]{imagens/cdfacade}\caption{\label{fig:Diagrama-de-classe-fachada}Diagrama de classe para a fachada}
+\end{figure}
+
+
+Uma vez obtidos os dados, faz-se necessário utilizar alguma heurística
+para selecionar os melhores jogadores. Utilizaremos como métrica inicial
+a quantidade de fichas adquiridas pelo jogador no decorrer do tempo
+visto. Também é importante seccionar os jogadores em diferentes perfis
+para treinar diferentes modelagens de oponente.
+
+\newpage{}
+
+
+\section{CONCLUSÃO}
+
+\noindent \indent
+
+Da pesquisa bibliográfica realizada, concluímos que é factível a utilização
+de redes neurais para a simulação e análise de oponentes no jogo de
+pôquer, dando a entender que é promissora a possibilidade de utilização
+de uma rede neural como agente \textit{stand-alone} do jogo.
+
+\noindent \indent
+
+\newpage{}
+
+
+\section{REFERÊNCIAS}
+
+\renewcommand\refname{}
+\renewcommand{\bibsection}{}
+
+%\vspace*{-1em}
+%\vspace*{-1em}
+\begin{thebibliography}{Referências}
+\bibitem{opponent_modeling} Salim, Rohwer. \textbf{Poker Opponent
+Modeling} - Indiana University, 2006.
+
+\bibitem{opponent_modeling_old}Billings, Papp et al. \textbf{Opponent
+Modeling in Poker} - AAAI, University of Alberta, Edmonton, Canada,
+1998.
+
+\bibitem{key-3}Davidson, Billings, Schaeffer, Szafron. \textbf{Improved
+Opponent Modeling in Poker} - University of Alberta, Edmonton, Canada,
+2000.
+
+\bibitem{key-2}Johnson. \textbf{Robust Strategies and Counter-Strategies:
+Building a Champion Level Computer Poker Player} - University of Alberta,
+2007.
+
+\bibitem{key-4}Nicolai, Hilderman. \textbf{No-Limit Texas Hold\textquoteright{}em
+Poker Agents Created with Evolutionary Neural Networks} - IEEE Symposium
+on Computational Intelligence and Games, 2009.
+
+\bibitem{key-5}B. Beattie, G. Nicolai, D. Gerhard, and R. J. Hilderman.
+\textbf{Pattern classification in no-limit poker: A head-start evolutionary
+approach} - Canadian Conference on AI, 204\textendash{}215, 2007.
+
+\bibitem{key-5-2}Russell S., Norvig P. - \textbf{Artificial Intelligence:
+A Modern Approach (3rd Edition)}, 20??.\end{thebibliography}
+
+\end{document}
