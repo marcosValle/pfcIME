@@ -1,0 +1,19 @@
+#!/bin/bash
+# Monitora modificacoes no arquivo de ips automaticamente bloqueados pelo psad
+# ipset banned_nets deve ter sido criado!
+
+AUTO_BLOCKED_IPTABLES_PATH=/var/log/psad/auto_blocked_iptables
+
+update_set(){
+	ipset flush banned_nets
+
+	grep -E -o '^([0-9]{1,3}[\.]){3}[0-9]{1,3}' $AUTO_BLOCKED_IPTABLES_PATH |  while read -r line ; do
+		echo "Processando $line"
+		ipset add banned_nets $line
+	done
+}
+
+while true #run indefinitely 
+do
+	inotifywait -e modify $AUTO_BLOCKED_IPTABLES_PATH | update_set
+done
