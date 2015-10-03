@@ -59,6 +59,13 @@ $IPTABLES -A INPUT -i $INT_INTF ! -s $INT_NET -j DROP
 ### regras ACCEPT
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 22 -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 443 -m conntrack --ctstate NEW -j ACCEPT
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 8080 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 8081 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 4848 -m conntrack --ctstate NEW -j ACCEPT #glassfish admin
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 9090 -m conntrack --ctstate NEW -j ACCEPT #geoserver
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 9191 -m conntrack --ctstate NEW -j ACCEPT #geoserver
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 5432 -m conntrack --ctstate NEW -j ACCEPT #postgres
 $IPTABLES -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 
 ### regra de log padrao da cadeia INPUT
@@ -87,6 +94,14 @@ $IPTABLES -A OUTPUT -p tcp --dport 443 -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -A OUTPUT -p tcp --dport 4321 -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -A OUTPUT -p tcp --dport 53 -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -A OUTPUT -p udp --dport 53 -m conntrack --ctstate NEW -j ACCEPT
+
+$IPTABLES -A OUTPUT -p tcp --dport 8080 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
+$IPTABLES -A OUTPUT -p tcp --dport 8081 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
+$IPTABLES -A OUTPUT -p tcp --dport 4848 -m conntrack --ctstate NEW -j ACCEPT #glassfish admin
+$IPTABLES -A OUTPUT -p tcp --dport 9090 -m conntrack --ctstate NEW -j ACCEPT #geoserver
+$IPTABLES -A OUTPUT -p tcp --dport 9191 -m conntrack --ctstate NEW -j ACCEPT #geoserver
+$IPTABLES -A OUTPUT -p tcp --dport 5432 -m conntrack --ctstate NEW -j ACCEPT #postgres
+$IPTABLES -A OUTPUT -p udp --dport 5432 -m conntrack --ctstate NEW -j ACCEPT #postgres
 $IPTABLES -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT
 
 ### regra de log padrao para OUTPUT

@@ -17,14 +17,14 @@
 #### INSTALACAO DOS COMPONENTES ####
 ####################################
 
-#echo "Instalando o analisador de logs (psad)..."
-#	apt-get install psad -y
+echo "Instalando o analisador de logs (psad)..."
+	apt-get install psad -y
 
-#echo "Instalando complemento do firewall (fwsnort)..."
-#	apt-get install fwsnort -y
+echo "Instalando complemento do firewall (fwsnort)..."
+	apt-get install fwsnort -y
 
-#echo "Instalando gerenciador de emails (postfix)..." 
-#	apt-get install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules-y
+echo "Instalando gerenciador de emails (postfix)..." 
+	apt-get install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules-y
 
 
 ######################################
@@ -35,18 +35,25 @@ echo "Configurando postfix..."
 	#copiar arquivo de configuracao (incluir no pacote)
 	#congigurar para gmail (atencao para a senha!)
 	#configurar para nao aparecer a tela
-	postfix reload #reinicializa o postfix
+	#postfix reload #reinicializa o postfix
 
 echo "Configurando regras do firewall..."
 	./config/iptables/iptables.sh  #incluir no pacote
 
 echo "Configurando fwsnort..."
-	#copiar regras para a pasta do fwsnort (incluir no pacote)
+	#copiar regras para a pasta do fwsnort (incluidas no pacote)
+	#cp -r config/fwsnort/snort_rules /etc/fwsnort/
 	#executar script de insercao de regras
+	fwsnort --update-rules
+	fwsnort
+	/var/lib/fwsnort/fwsnort.sh	
 
 echo "Configurando psad..."
-	#substituir arquivo de configuracao do psad (incluir no pacote)
-	#reinicializar psad
+	#substituir arquivo de configuracao do psad (incluido no pacote)
+	rm /etc/psad/psad.conf
+	cp config/psad/psad.conf /etc/psad/psad.conf
+	echo "Reinicializando psad..."
+	service psad restart
 
 ########################################
 #### INICIALIZACAO DO UPDATE_DAEMON ####
