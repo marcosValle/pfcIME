@@ -17,8 +17,8 @@ MODPROBE=/sbin/modprobe
 INT_NET=192.168.1.0/16
 INT_INTF=eth0	#Interface interna (entrada)
 EXT_INTF=eth0	#Interfaca externa (saida)
-SERVER_ADDR=192.168.56.103
-HONEYPOT_ADDR=192.168.56.102
+SERVER_ADDR=192.168.56.104
+HONEYPOT_ADDR=192.168.56.103
 
 ### remove regras existentes e define a politica padrao para DROP (default deny)
 echo "[+] Removendo regras existentes..."
@@ -61,7 +61,7 @@ $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 22 -m conntrack --cts
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 80 -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 443 -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 8080 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
-$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 8081 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
+$IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 8181 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 4848 -m conntrack --ctstate NEW -j ACCEPT #glassfish admin
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 9090 -m conntrack --ctstate NEW -j ACCEPT #geoserver
 $IPTABLES -A INPUT -i $INT_INTF -p tcp -s $INT_NET --dport 9191 -m conntrack --ctstate NEW -j ACCEPT #geoserver
@@ -96,7 +96,7 @@ $IPTABLES -A OUTPUT -p tcp --dport 53 -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -A OUTPUT -p udp --dport 53 -m conntrack --ctstate NEW -j ACCEPT
 
 $IPTABLES -A OUTPUT -p tcp --dport 8080 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
-$IPTABLES -A OUTPUT -p tcp --dport 8081 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
+$IPTABLES -A OUTPUT -p tcp --dport 8181 -m conntrack --ctstate NEW -j ACCEPT #aplicacao do admin
 $IPTABLES -A OUTPUT -p tcp --dport 4848 -m conntrack --ctstate NEW -j ACCEPT #glassfish admin
 $IPTABLES -A OUTPUT -p tcp --dport 9090 -m conntrack --ctstate NEW -j ACCEPT #geoserver
 $IPTABLES -A OUTPUT -p tcp --dport 9191 -m conntrack --ctstate NEW -j ACCEPT #geoserver
