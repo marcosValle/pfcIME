@@ -40,6 +40,10 @@ The full architecture solution requires a honeypot machine to work properly. We 
 * config/psad/psad.conf
 `EMAIL_ADDRESSES >> emails to receive alerts`
 
+After the configuration just install it:
+
+`./INSTALL`
+
 # Usage
 
 To start the solution
