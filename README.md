@@ -12,7 +12,7 @@ This system provides a security module for Ubuntu 14.04 web servers. It is based
 
 The complete system has it's data flow shown in the picture below.
 
-![alt tag](http://url/to/img.png)
+![Packets data flow](https://github.com/marcosValle/pfcIME/blob/master/docs/imagens/Criadas/fluxo_rede.png)
 
 Once a packet enters the system, it goes first through the firewall rules. If it does not attend to any of those rules it is logged.
 
