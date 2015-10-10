@@ -18,9 +18,12 @@ Once a packet enters the system, it goes first through the firewall rules. If it
 
 In order to increase logging efficiency, fwsnort is used to automatically convert part of the Snort rules into iptables rules. This way it is possible to use Snort as an IPS through Netfilter's packets filtering resources.
 
-The psad tools monitors logs and adds malicious IP addresses into ips_blocked_iptables. At first, all packets comming from these IPs will be dropped.
+The psad tools monitors logs and adds malicious IP addresses into auto_blocked_iptables. At first, all packets comming from these IPs will be dropped.
 
-The update_daemon is a script that uses inotify_tools to monitor the ip_blocked_iptables and add the IPs into an ipset. This way, iptables is able to use these addresses to redirect them to the honeypot.
+The update_daemon is a script that uses inotify_tools to monitor the auto_blocked_iptables and add the IPs into an ipset. This way, iptables is able to use these addresses to redirect them to the honeypot. The following picture shows the architecture flow with more details:
+
+![Packets data flow 2](https://github.com/marcosValle/pfcIME/blob/master/docs/imagens/criadas/VF/fluxograma_arquitetura_completa.png)
+
 
 # Installation
 
