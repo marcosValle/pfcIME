@@ -1,0 +1,15 @@
+O modulo de seguranca com honeypot implementa a arquitetura completa de seguranca com honeypot.
+
+##### CONFIGURACOES NO SERVIDOR #####
+1. config/iptables/iptables.sh
+	$INT_NET >> endereco e mascara da rede interna
+	$INT_INTF >> interface interna
+	$EXT_INTF >> interface externa
+	$SERVER_ADDR >> endereco IP do servidor
+	$HPT_ADDR >> endereco IP do Honeypot
+2. confif/psad/psad.conf
+	EMAIL_ADDRESSES >> emails para receber os alertas
+
+##### CONFIGURACOES NO HONEYPOT #####
+1.sudo sh /honeydrive/dionaea-vagrant/runDionaea.sh 
+	[password = honeydrive]

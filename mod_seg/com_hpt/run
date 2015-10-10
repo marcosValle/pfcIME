@@ -1,0 +1,33 @@
+#!/bin/bash
+
+######################################
+#### CONFIGURACAO DOS COMPONENTES ####
+######################################
+
+echo "Configurando postfix..."
+	#configurar para o servidor de emails
+	postfix reload #reinicializa o postfix
+
+echo "Configurando regras do firewall..."
+	./config/iptables/iptables.sh #levanta as regras do firewall
+
+echo "Configurando fwsnort..."
+	#cp -r config/fwsnort/snort_rules /etc/fwsnort/
+	#executar script de insercao de regras
+	fwsnort --update-rules #baixa regras snort do repositorio externo
+	fwsnort #converte regras snort para regras do iptables
+	/var/lib/fwsnort/fwsnort.sh #salva as regras
+
+echo "Configurando psad..."
+	#substituir arquivo de configuracao do psad (incluido no pacote)
+	rm /etc/psad/psad.conf
+	cp config/psad/psad.conf /etc/psad/psad.conf
+	echo "Reinicializando psad..."
+	service psad restart
+
+########################################
+#### INICIALIZACAO DO UPDATE_DAEMON ####
+########################################
+
+echo "Inicializando o update_daemon..."
+	./update_daemon/auto_block_daemon

@@ -1,0 +1,21 @@
+#!/bin/sh
+echo "Preparando para desligar o sistema de seguranca..."
+echo "!!!ATENCAO!!!"
+echo "SEU SISTEMA FICARA DESPROTEGIDO"
+
+echo "Parando o firewall e permitindo acesso total"
+
+iptables -F
+iptables -X
+iptables -t nat -F
+iptables -t nat -X
+iptables -t mangle -F
+iptables -t mangle -X
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+echo "Firewall resetado com sucesso!"
+
+echo "Parando outros servicos de seguranca..."
+service psad stop
