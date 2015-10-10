@@ -28,14 +28,14 @@ The full architecture solution requires a honeypot machine to work properly. We 
 
 * config/iptables/iptables.sh
 ```
-	$INT_NET >> endereco e mascara da rede interna
-	$INT_INTF >> interface interna
-	$EXT_INTF >> interface externa
-	$SERVER_ADDR >> endereco IP do servidor
-	$HPT_ADDR >> endereco IP do Honeypot
+	$INT_NET >> address and internal network mask
+	$INT_INTF >> internal interface
+	$EXT_INTF >> external interface
+	$SERVER_ADDR >> server IP address
+	$HPT_ADDR >> honeypot IP address
 ```
 * config/psad/psad.conf
-`EMAIL_ADDRESSES >> emails para receber os alertas`
+`EMAIL_ADDRESSES >> emails to receive alerts`
 
 # Usage
 
