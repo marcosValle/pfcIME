@@ -1,23 +1,23 @@
 # pfcIME
 
-Esse sistema provê um módulo de segurança para servidores linux Ubuntu 14.04 baseado nos seguintes sub-módulos:
+This system provides a security module for Ubuntu 14.04 web servers. It is based on the following submodules:
 
-1. Firewall iptables como primeira barreira de defesa.
-2. fwsnort como IPS baseado no Snort, com suas regras convertidas para regras iptables.
-3. psad como monitor de logs e sistema de alerta por email.
-4. update_daemon como script de inserção de IPs bloqueados pel psad em um ipset, para serem verificados pelo firewall
-5. [OPCIONAL] Honeypot a ser utilizado para o encaminhamento de requisições previamente identificada como maliciosas.
+1. Firewall iptables as the first defensive line.
+2. fwsnort as a Snort based IPS
+3. psad as the log monitor and email alert system.
+4. update_daemon as the blocked IPs insertion script into an ipset.
+5. [OPTIONAL] Honeypot to be used for receiving forwarded previously identified malicious requests.
 
-# Arquitetura
+# Architecture
 
-O sistema completo tem seu fluxo de dados ilustrado na figura abaixo
+The complete system has it's data flow shown in the picture below.
 
 ![alt tag](http://url/to/img.png)
 
-Uma vez que um pacote direcionado ao servidor entra no sistema, passa primeiramente pelas regras do firewall. Caso não esteja de acordo com alguma, é registrado no arquivo de logs.
+Once a packet enters the system, it goes first through the firewall rules. If it does not attend to any of those rules it is logged.
 
-Para aumentar a eficácia dos registros, é utilizado o fwsnort, que converte automaticamente parte das regras Snort para regras iptables com grau de acerto aceitável. Com isso é possível utilizar do Snort como IPS por meio dos recursos de filtragem de pacotes do netfilter.
+In order to increase logging efficiency, fwsnort is used to automatically convert part of the Snort rules into iptables rules. This way it is possible to use Snort as an IPS through Netfilter's packets filtering resources.
 
-A ferramenta psad monitora os logs e adiciona endereços IPs identificados como maliciosos ao arquivo ips_blocked_iptables. A princípio, todos os pacotes vindos desses IPs seriam então descartados.
+The psad tools monitors logs and adds malicious IP addresses into ips_blocked_iptables. At first, all packets comming from these IPs will be dropped.
 
-O update_daemon é um script que usa inotify_tools para monitorar o ip_blocked_iptables e adicionar os IPs a um ipset. Dessa forma, o iptables pode utilizar esses endereços para redirecioná-los para o honeypot.
+The update_daemon is a script that uses inotify_tools to monitor the ip_blocked_iptables and add the IPs into an ipset. This way, iptables is able to use these addresses to redirect them to the honeypot.
