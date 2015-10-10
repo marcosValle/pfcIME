@@ -52,6 +52,7 @@ echo "Configurando psad..."
 	#substituir arquivo de configuracao do psad (incluido no pacote)
 	rm /etc/psad/psad.conf
 	cp config/psad/psad.conf /etc/psad/psad.conf
+	>/var/log/psad/auto_blocked_iptables
 	echo "Reinicializando psad..."
 	service psad restart
 
